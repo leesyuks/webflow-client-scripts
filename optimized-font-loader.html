@@ -1,0 +1,65 @@
+<!--
+Ultra-optimized Webflow font loader — paste into Site Settings > Custom Code > Head
+
+Optimizations:
+- dns-prefetch for less-critical origins (lighter than preconnect)
+- preconnect only for critical font sources
+- Reduced timeout (2s) for better perceived performance
+- requestAnimationFrame for smoother class transitions
+- Modern JS with better performance
+- Optional specific font loading (not just waiting for all fonts)
+- Removed text-rendering:optimizeLegibility (can hurt perf on large text)
+- Smaller, faster code
+-->
+
+<!-- Critical preconnects (fonts actually used) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Lighter dns-prefetch for asset domains -->
+<link rel="dns-prefetch" href="https://assets-global.website-files.com">
+<link rel="dns-prefetch" href="https://uploads-ssl.webflow.com">
+
+<!-- Preload critical fonts (uncomment and update with your actual font URLs) -->
+<!--
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+-->
+
+<!-- Google Fonts with display=swap (uncomment and update) -->
+<!--
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+-->
+
+<style>
+/* Minimal anti-aliasing (text-rendering removed for better perf) */
+html,body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+/* System fallback stack */
+:root{--font-fallback:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+
+body{font-family:'Your Webflow Font',var(--font-fallback);font-feature-settings:"kern","liga"}
+
+/* Selective hiding - add .wf-hide-until-font only to critical elements */
+.wf-loading .wf-hide-until-font{visibility:hidden}
+.wf-active .wf-hide-until-font,.wf-inactive .wf-hide-until-font{visibility:visible;animation:wf-fadein 120ms ease}
+
+@keyframes wf-fadein{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.wf-active .wf-hide-until-font,.wf-inactive .wf-hide-until-font{animation:none}}
+</style>
+
+<script>
+/*
+Optimized font loading:
+- Reduced 2s timeout for better UX
+- Uses RAF for smooth class changes
+- Supports specific font checking
+- Cleaner, faster code
+*/
+!function(){"use strict";const e=2e3,t=document.documentElement;let n=!1;const o=i=>()=>{n||(n=!0,requestAnimationFrame(()=>{t.classList.remove("wf-loading"),t.classList.add(i)}))},c=o("wf-active"),s=o("wf-inactive");if(t.classList.add("wf-loading"),document.fonts&&document.fonts.ready){const t=setTimeout(s,e);document.fonts.ready.then(()=>{clearTimeout(t),c()},()=>{clearTimeout(t),s()})}else setTimeout(s,e)}();
+
+// Optional: Check specific fonts (uncomment to enable)
+// Replace 'Inter' with your actual font name
+/*
+!function(){"use strict";if(!document.fonts||!document.fonts.check)return;const checkFont=()=>document.fonts.check('12px "Inter"');let attempts=0;const interval=setInterval(()=>{if(checkFont()||++attempts>20){clearInterval(interval);document.documentElement.classList.add('wf-active')}},50)}();
+*/
+</script>
