@@ -6,7 +6,7 @@ A collection of custom JavaScript and HTML snippets used to enhance Webflow proj
 
 | Script Name | Description | File Link |
 | :--- | :--- | :--- |
-| **Font Loader** | Optimizes font loading to prevent FOIT (Flash of Invisible Text) | [View Code](./optimized-font-loader.html) |
+| **Font Loader** | Optimizes font loading to prevent FOIT (Flash of Invisible Text) | [View Code](./performance/optimized-font-loader.html) |
 | *(Future Script)* | *(Description goes here)* | *(Link)* |
 
 ## 🚀 How to use in Webflow
