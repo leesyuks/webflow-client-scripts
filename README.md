@@ -1,20 +1,24 @@
-# Project Name: Webflow
+# Webflow Client Scripts ⚡
 
-## 📖 Description
-A brief description of what this website is and who it is for.
+A collection of custom JavaScript and HTML snippets used to enhance Webflow projects.
 
-## 🚀 Live Demo
-[Link to the live site or Webflow project]
+## 📂 Repository Contents
+
+| Script Name | Description | File Link |
+| :--- | :--- | :--- |
+| **Font Loader** | Optimizes font loading to prevent FOIT (Flash of Invisible Text) | [View Code](./optimized-font-loader.html) |
+| *(Future Script)* | *(Description goes here)* | *(Link)* |
+
+## 🚀 How to use in Webflow
+
+1. Click on the file name above (e.g., `optimized-font-loader.html`).
+2. Copy the code (Raw view).
+3. In Webflow, go to **Project Settings > Custom Code**.
+4. Paste into the `<head>` or `Before </body>` tag as specified in the file.
 
 ## 🛠 Tech Stack
-* HTML5
-* CSS3 (SCSS)
-* JavaScript (ES6)
-* Webflow
+* **HTML/JS**
+* **Webflow**
 
-## 📸 Screenshots
-(Place an image here! Visuals are critical for designers.)
-![Alt text for image](./path-to-image.png)
-
-## 💡 Lessons Learned
-Briefly mention one challenge you faced and how you solved it.
+---
+*Maintained by Syukur Shuib
