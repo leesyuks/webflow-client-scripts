@@ -6,13 +6,6 @@ A collection of custom JavaScript and HTML snippets used to enhance Webflow proj
 
 | Script Name | Description | File Link |
 | :--- | :--- | :--- |
-| **Font Loader** | Optimizes font loading to prevent FOIT (Flash of Invisible Text) | [View Code](./performance/optimized-font-loader.html) |
-| *(Future Script)* | *(Description goes here)* | *(Link)* |
-
-## 📂 Repository Contents
-
-| Script Name | Description | File Link |
-| :--- | :--- | :--- |
 | **Font Loader** | Optimizes font loading to prevent FOIT | [View Code](./performance/optimized-font-loader.html) |
 | **Input Masking** | Auto-formatting for phone numbers (Coming Soon) | [View Code](./forms/input-mask.js) |
 | **Relume Color Mapper** | Maps specific Relume color schemes (2-10) back to Scheme 1 variables | [View Code](./styles/relume-color-mapper.html) |
