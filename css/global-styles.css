@@ -1,0 +1,51 @@
+/* --- CORE RESET & SMOOTHING --- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth; /* smooth scrolling for anchor links */
+}
+
+/* Ensure all elements use border-box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* --- TYPOGRAPHY INHERITANCE --- */
+/* Forces form elements and links to inherit the font styles you set in Webflow Body */
+a, 
+.w-input, 
+.w-select, 
+.w-tab-link, 
+.w-nav-link, 
+.w-nav-brand, 
+.w-dropdown-btn, 
+.w-dropdown-toggle, 
+.w-slider-arrow-left, 
+.w-slider-arrow-right, 
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* --- ACCESSIBILITY --- */
+/* High visibility focus state for keyboard users */
+:focus-visible {
+  outline: 0.125rem solid #4d65ff;
+  outline-offset: 0.125rem;
+}
+
+/* --- MODERN LAYOUT TWEAKS --- */
+/* Makes headings wrap nicely to avoid single words on a new line */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* --- ACCESSIBILITY SAFEGUARD --- */
+/* Respects users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
