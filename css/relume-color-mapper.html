@@ -1,0 +1,94 @@
+<meta name="relume-color-schemes" content="false"/>
+
+<style>
+/* --- COLOR SCHEME MAPPING --- */
+/* We map specific schemes (2-10) back to Scheme 1 variables. 
+  This allows all components to use Scheme 1 variables while 
+  changing colors based on the parent class.
+*/
+
+.color-scheme-2 {
+  --color-scheme-1--text: var(--color-scheme-2--text);
+  --color-scheme-1--background: var(--color-scheme-2--background);
+  --color-scheme-1--foreground: var(--color-scheme-2--foreground);
+  --color-scheme-1--border: var(--color-scheme-2--border);
+  --color-scheme-1--accent: var(--color-scheme-2--accent);
+}
+
+.color-scheme-3 {
+  --color-scheme-1--text: var(--color-scheme-3--text);
+  --color-scheme-1--background: var(--color-scheme-3--background);
+  --color-scheme-1--foreground: var(--color-scheme-3--foreground);
+  --color-scheme-1--border: var(--color-scheme-3--border);
+  --color-scheme-1--accent: var(--color-scheme-3--accent);
+}
+
+.color-scheme-4 {
+  --color-scheme-1--text: var(--color-scheme-4--text);
+  --color-scheme-1--background: var(--color-scheme-4--background);
+  --color-scheme-1--foreground: var(--color-scheme-4--foreground);
+  --color-scheme-1--border: var(--color-scheme-4--border);
+  --color-scheme-1--accent: var(--color-scheme-4--accent);
+}
+
+.color-scheme-5 {
+  --color-scheme-1--text: var(--color-scheme-5--text);
+  --color-scheme-1--background: var(--color-scheme-5--background);
+  --color-scheme-1--foreground: var(--color-scheme-5--foreground);
+  --color-scheme-1--border: var(--color-scheme-5--border);
+  --color-scheme-1--accent: var(--color-scheme-5--accent);
+}
+
+.color-scheme-6 {
+  --color-scheme-1--text: var(--color-scheme-6--text);
+  --color-scheme-1--background: var(--color-scheme-6--background);
+  --color-scheme-1--foreground: var(--color-scheme-6--foreground);
+  --color-scheme-1--border: var(--color-scheme-6--border);
+  --color-scheme-1--accent: var(--color-scheme-6--accent);
+}
+
+.color-scheme-7 {
+  --color-scheme-1--text: var(--color-scheme-7--text);
+  --color-scheme-1--background: var(--color-scheme-7--background);
+  --color-scheme-1--foreground: var(--color-scheme-7--foreground);
+  --color-scheme-1--border: var(--color-scheme-7--border);
+  --color-scheme-1--accent: var(--color-scheme-7--accent);
+}
+
+.color-scheme-8 {
+  --color-scheme-1--text: var(--color-scheme-8--text);
+  --color-scheme-1--background: var(--color-scheme-8--background);
+  --color-scheme-1--foreground: var(--color-scheme-8--foreground);
+  --color-scheme-1--border: var(--color-scheme-8--border);
+  --color-scheme-1--accent: var(--color-scheme-8--accent);
+}
+
+.color-scheme-9 {
+  --color-scheme-1--text: var(--color-scheme-9--text);
+  --color-scheme-1--background: var(--color-scheme-9--background);
+  --color-scheme-1--foreground: var(--color-scheme-9--foreground);
+  --color-scheme-1--border: var(--color-scheme-9--border);
+  --color-scheme-1--accent: var(--color-scheme-9--accent);
+}
+
+.color-scheme-10 {
+  --color-scheme-1--text: var(--color-scheme-10--text);
+  --color-scheme-1--background: var(--color-scheme-10--background);
+  --color-scheme-1--foreground: var(--color-scheme-10--foreground);
+  --color-scheme-1--border: var(--color-scheme-10--border);
+  --color-scheme-1--accent: var(--color-scheme-10--accent);
+}
+
+/* --- WEBFLOW SLIDER DOTS --- */
+/* Consolidating logic for slider navigation colors */
+.w-slider-dot, 
+.w-slider-nav-invert .w-slider-dot {
+  background-color: var(--color-scheme-1--text) !important;
+  opacity: 0.2;
+}
+
+.w-slider-dot.w-active, 
+.w-slider-nav-invert .w-slider-dot.w-active {
+  opacity: 1 !important;
+}
+</style>
